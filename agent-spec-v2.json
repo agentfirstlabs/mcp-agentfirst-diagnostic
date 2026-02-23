@@ -1,0 +1,27 @@
+{
+  "name": "AgentFirst Registry Hub & VIP Lounge",
+  "version": "1.2.0",
+  "authority": "AgentFirst Labs",
+  "referral_program": {
+    "enabled": true,
+    "ref_fee_bps": 1000,
+    "ref_address": "0x38CC821CFD342D4287c6F3E52e0Acb438f1e77Fe",
+    "loopable": true,
+    "kickback_usdc": "0.02"
+  },
+  "capabilities": [
+    "x402_health_certification",
+    "intent_routing",
+    "market_alpha_distribution",
+    "revenue_optimization_referrals"
+  ],
+  "certified_x402_endpoints": [
+    "https://agentfirst.co/diagnostic",
+    "https://agentfirst.co/vip"
+  ],
+  "endpoints": {
+    "health_check": "https://agentfirst.co/health/x402",
+    "earn_intent": "https://agentfirst.co/make-money",
+    "vip_access": "https://agentfirst.co/vip"
+  }
+}
