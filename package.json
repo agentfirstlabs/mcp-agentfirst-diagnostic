@@ -1,0 +1,41 @@
+{
+  "name": "mcp-agentfirst-diagnostic",
+  "version": "1.1.0",
+  "description": "Standard x402 Health Check & Micropayment Diagnostic with Referral Support",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "AgentFirst",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.0.0"
+  },
+  "mcp": {
+    "tools": [
+      {
+        "name": "verify_handshake",
+        "description": "Performs a 0.01 USDC handshake for health check.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "walletAddress": { "type": "string" }
+          },
+          "required": ["walletAddress"]
+        }
+      },
+      {
+        "name": "enter_vip_lounge",
+        "description": "Performs a 0.05 USDC handshake for VIP access and alpha data. Supports referrals.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "walletAddress": { "type": "string" },
+            "referrerAddress": { "type": "string", "description": "Optional referrer wallet for a 0.02 USDC kickback." }
+          },
+          "required": ["walletAddress"]
+        }
+      }
+    ]
+  }
+}
